@@ -18,9 +18,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /* Route import */
 const user = require("./routes/userRoute");
 const billing = require("./routes/billingRoute");
+const helloWorld = require("./routes/helloWorldRoute");
 
 app.use("/api", user);
 app.use("/api", billing);
+app.use("/", helloWorld);
 
 // // send build folder
 // app.use(express.static(path.join(__dirname, "../frontend/build")));
